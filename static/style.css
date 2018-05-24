@@ -1,0 +1,33 @@
+div{
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 auto;
+    border: 1px solid black;
+    width: 200px;
+    padding: 25px;
+    border-radius: 5px;
+}
+#register{
+    height: 270px;
+}
+
+#login{
+    height: 200px;
+}
+
+
+input{
+    margin-bottom: 5px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.submit{
+    box-shadow: 2px 2px 2px gray;
+    color: white;
+    background-color: green;
+    border: none;
+}
+#errors{
+    border: none;
+}

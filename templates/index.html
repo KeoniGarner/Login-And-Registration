@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>Register | Login</title>
+</head>
+<body>
+    <div id="register">
+        <h3>Register:</h3>
+        <form action="success" method='post'>
+            <input type="text" name="first_name" placeholder="first name">
+            <input type="text" name="last_name" placeholder="last name">
+            <input type="text" name="email" placeholder="email">
+            <input type="password" name="password" placeholder="password">
+            <input type="password" name="confirm_password" placeholder="confirm password">
+            <input type="submit" class="submit">
+        </form>
+    </div>
+    <div id='errors'>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <p>{{message}}</p>
+                {% endfor %}
+            {% endif %}
+        {% endwith %} 
+    </div>
+    <div id="login">
+        <h3>Login:</h3>
+        <form action="user" method="post">
+            <input type="text" name="email" placeholder="email">
+            <input type="password" name="password" placeholder="password">
+            <input type="submit" class="submit">
+        </form>
+    </div>
+</body>
+</html>
